@@ -2,11 +2,214 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Глейси</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/180.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
+    <header class="main-header">
+
+      <nav class="main-header-nav">
+          <a class="header-logo"><img src="#" alt="Логотип Глэйси" width="154" height="64"></a>
+
+          <ul class="header-nav-list">
+              <li class="header-nav-item">
+                  <a href="catalog.html">Каталог</a>
+                  <!-- вложенный список появляется при наведении -->
+                  <ul class="inner-header-nav visually-hidden">
+                      <li class="inner-header-nav-item inner-header-nav-item-new"><a href="blank.html">Новинки</a></li>
+                      <li class="inner-header-nav-item"><a href="catalog.html">Сливочное</a></li>
+                      <li class="inner-header-nav-item"><a href="blank.html">Щербеты</a></li>
+                      <li class="inner-header-nav-item"><a href="blank.html">Фруктовый лед</a></li>
+                      <li class="inner-header-nav-item"><a href="blank.html">Мелорин</a></li>
+                  </ul>
+              </li>
+              <li class="header-nav-item">
+                  <a href="blank.html">Доставка и оплата</a>
+              </li>
+              <li class="header-nav-item">
+                  <a href="blank.html">О компании</a>
+              </li>
+          </ul>
+      </nav>
+
+      <!-- окно с полем ввода появляется при наведении _на что? кружочек с лупой?_ -->
+      <form action="https://echo.htmlacademy.ru" method="POST" class="header-form-search">
+          <label for="header-search-message" class="visually-hidden">Поиск</label>
+          <input type="text" name="header-search-message" id="header-search-message" placeholder="Крем-брюле">
+      </form>
+
+      <ul class="users-menu">
+          <li><a href="blank.html" class="users-menu-link users-menu-enter">Вход</a></li>
+          <li><a href="blank.html" class="users-menu-link users-menu-basket"><span>Корзина</span><span>Пусто</span></a></li>
+      </ul>
+      <!-- форма авторизации????? куда ее засунуть??-->
+
+      <form action="https://echo.htmlacademy.ru" method="POST" class="header-form-enter">
+          <label for="form-enter-login" class="visually-hidden">Логин</label>
+          <input id="form-enter-login" type="email" name="login" placeholder="email@example.com">
+          <label for="form-enter-password" class="visually-hidden">Пароль</label>
+          <input id="form-enter-password" type="password" name="password" placeholder="......">
+          <button type="submit">Войти</button>
+          <a href="blank.html">Забыли пароль?</a>
+          <a href="blank.html">Новая регистрация</a>
+      </form>
+
+      <div>
+          <p class="working-hours">с 10 до 20, ежедневно</p>
+          <a href="tel:+78124502525">8 812 450-25-25</a>
+      </div>
+
+    </header>
+
+    <main>
+        <h1 class="visually-hidden">Магазин мороженого Глейси</h1>
+
+        <section class="double-ice">
+            <h2 class="visually-hidden">Двойное мороженое</h2>
+            <!-- слайдер -->
+            <!-- куда вставить кнопки-кружочки???????? -->
+            <ul class="double-ice-slider-list">
+                <!-- открытый слайд имеет дополнительный класс double-ice-slider-item-open -->
+                <li class="double-ice-slider-item double-ice-slider-item-open">
+                    <img src="#" alt="Два рожка мороженого, крем-брюле и пломбир с малиновым джемом" width="647" height="584">
+                    <p>Крем-брюле и пломбир с малиновым джемом</p>
+                    <a href="blank.html" class="btn-red">Давайте оба!</a>
+                </li>
+
+                <li class="double-ice-slider-item">
+                    <img src="#" alt="Два рожка мороженого, шоколадный пломбир и лимонный сорбет" width="644" height="582">
+                    <p>Шоколадный пломбир и лимонный сорбет</p>
+                    <a href="blank.html" class="btn-red">Давайте оба!</a>
+                </li>
+                <li class="double-ice-slider-item">
+                    <img src="#" alt="Два рожка мороженого, пломбир с помадкой и клубничный щербет" width="639" height="582">
+                    <p>Пломбир с помадкой и клубничный щербет</p>
+                    <a href="blank.html" class="btn-red">Давайте оба!</a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="promotions">
+            <h2 class="visually-hidden">Акции</h2>
+
+            <section class="promo">
+                <h3>Малинка даром!</h3>
+                <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+                <a href="blank.html" class="btn-red">Хочу варенье!</a>
+            </section>
+
+            <section class="promo">
+                <h3>Шоколадки даром!</h3>
+                <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+                <a href="blank.html" class="btn-red">Хочу шоколадки!</a>
+            </section>
+
+        </section>
+
+        <section class="goods">
+            <h2 class="visually-hidden">Популярное мороженое</h2>
+
+            <ul class="goods-list">
+                <!-- здесь будут карточки товаров -->
+            </ul>
+
+        </section>
+
+        <section class="features">
+            <h2 class="visually-hidden">Особенности магазина Глейси</h2>
+
+            <p>Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</p>
+            <ul class="features-list">
+                <li class="features-item">
+                    Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
+                </li>
+
+                <li class="features-item">
+                    Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
+                </li>
+
+                <li class="features-item">
+                    Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
+                </li>
+
+                <li class="features-item">
+                    Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
+                </li>
+
+            </ul>
+
+        </section>
+
+        <article class="blog">
+            <h2>Новое в нашем блоге</h2>
+            <!-- это изображение контентное или декоративное?? -->
+            <img src="#" alt="Щербет с клубникой и мятой" width="" height="">
+            <a href="blank.html">10 способов сервировки фруктовых щербетов к столу</a>
+
+        </article>
+
+        <section class="subscribe">
+            <h2 class="visually-hidden">Подпишись на рассылку</h2>
+            <p>
+                Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
+            </p>
+            <form action="https://echo.htmlacademy.ru" method="POST" class="form-subscribe">
+                <label for="email-for-subscribe" class="visually-hidden">e-mail</label>
+                <input type="email" name="email-for-subscribe" id="email-for-subscribe" placeholder="email@example.com">
+                <button type="submit" class="btn-red">Отправить</button>
+            </form>
+
+        </section>
+
+        <section class="contacts">
+            <h2 class="visually-hidden">Двойное мороженое</h2>
+
+            <img src="#" alt="Адрес главного офиса и офлайн-магазина: наб. Реки Карповки, 5 лит П, Санкт-Петербург" width="1200" height="430">
+
+            <div>
+                <p>Адрес главного офиса и офлайн-магазина:</p>
+                <address>наб. Реки Карповки, 5 лит П, Санкт-Петербург</address>
+                <p>
+                    Для заказов по телефону:<br>
+                    <a href="tel:+78005558628">+7 800 555-86-28</a><br>
+                    (с 10 до 20 ежедневно)
+                </p>
+                <button type="button" class="btn-red">Форма обратной связи</button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+
+        <ul class="main-footer-sn-list">
+            <li class="sn-item sn-fb"><a href="blank.html">Facebook</a></li>
+            <li class="sn-item sn-vk"><a href="blank.html">Вконтакте</a></li>
+            <li class="sn-item sn-inst"><a href="blank.html">Instagram</a></li>
+            <li class="sn-item sn-tw"><a href="blank.html">Twitter</a></li>
+        </ul>
+
+        <ul class="footer-nav-list">
+            <li class="footer-nav-item footer-nav-item-heart"><a href="blank.html">Для поставщиков</a></li>
+            <li class="footer-nav-item"><a href="blank.html">О производстве</a></li>
+            <li class="footer-nav-item"><a href="blank.html">Наши документы</a></li>
+            <li class="footer-nav-item"><a href="blank.html">Экологические стандарты</a></li>
+        </ul>
+
+        <div>
+            <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="#" alt="Логотип HTML Academy" width="108" height="31"></a>
+            <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2021</p>
+        </div>
+
+    </footer>
 
   </body>
 </html>
