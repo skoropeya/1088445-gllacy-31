@@ -24,11 +24,11 @@
                       <a href="catalog.html">Каталог</a>
                       <!-- вложенный список появляется при наведении -->
                       <ul class="inner-header-nav">
-                          <li class="inner-header-nav-item inner-header-nav-item-new"><a href="blank.html">Новинки</a></li>
-                          <li class="inner-header-nav-item"><a href="catalog.html">Сливочное</a></li>
-                          <li class="inner-header-nav-item"><a href="blank.html">Щербеты</a></li>
-                          <li class="inner-header-nav-item"><a href="blank.html">Фруктовый лед</a></li>
-                          <li class="inner-header-nav-item"><a href="blank.html">Мелорин</a></li>
+                          <li class="inner-nav-item inner-nav-item-new"><a href="blank.html">Новинки</a></li>
+                          <li class="inner-nav-item"><a href="catalog.html">Сливочное</a></li>
+                          <li class="inner-nav-item"><a href="blank.html">Щербеты</a></li>
+                          <li class="inner-nav-item"><a href="blank.html">Фруктовый лед</a></li>
+                          <li class="inner-nav-item"><a href="blank.html">Мелорин</a></li>
                       </ul>
                   </li>
                   <li class="header-nav-item">
@@ -62,22 +62,23 @@
                 <!-- форма авторизации появляется при наведении -->
                 <form action="https://echo.htmlacademy.ru" method="POST" class="header-form-enter">
                   <label for="form-enter-login" class="visually-hidden">Логин</label>
-                  <input id="form-enter-login" type="email" name="login" placeholder="email@example.com">
+                  <input id="form-enter-login" type="email" name="login" placeholder="email@example.com" class="form-enter-login">
                   <label for="form-enter-password" class="visually-hidden">Пароль</label>
-                  <input id="form-enter-password" type="password" name="password" placeholder="......">
-                  <button type="submit">Войти</button>
-                  <a href="blank.html">Забыли пароль?</a>
-                  <a href="blank.html">Новая регистрация</a>
+                  <input id="form-enter-password" type="password" name="password" placeholder="......" class="form-enter-password">
+                  <button type="submit" class="btn-red btn-enter">Войти</button>
+                  <a href="blank.html" class="password-recovery">Забыли пароль?</a>
+                  <a href="blank.html" class="registration">Новая регистрация</a>
                 </form>
               </li>
-              <li class="user-menu-item user-menu-basket">
+              <li class="user-menu-item user-menu-basket basket-empty">
                 <a href="blank.html">
                   <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-icon-basket">
-                    <path d="M5.70345 2L5.46161 0H0V2H3.66795L5.17946 15H19.2869L21 2H5.70345ZM17.5034 13H6.97313L5.96545 4H18.6924L17.5034 13Z" fill="white"/>
                     <path d="M7.03359 20C8.14664 20 9.04894 19.1046 9.04894 18C9.04894 16.8954 8.14664 16 7.03359 16C5.92054 16 5.01823 16.8954 5.01823 18C5.01823 19.1046 5.92054 20 7.03359 20Z" fill="white"/>
                     <path d="M16.1027 20C17.2157 20 18.118 19.1046 18.118 18C18.118 16.8954 17.2157 16 16.1027 16C14.9896 16 14.0873 16.8954 14.0873 18C14.0873 19.1046 14.9896 20 16.1027 20Z" fill="white"/>
+                    <path d="M5.70345 2L5.46161 0H0V2H3.66795L5.17946 15H19.2869L21 2H5.70345ZM17.5034 13H6.97313L5.96545 4H18.6924L17.5034 13Z" fill="white"/>
+                    <path d="M5.93506 4.02997L6.97297 13H17.5032L18.6923 4.02997H5.93506Z" fill="transparent"/>
                   </svg>
-                  <span class="basket-contents basket-empty">Пусто</span>
+                  <span class="basket-contents">Пусто</span>
                 </a>
               </li>
           </ul>
@@ -104,7 +105,6 @@
                       <h3>Крем-брюле и пломбир с малиновым джемом</h3>
                       <a href="blank.html" class="btn-red btn-double-ice">Давайте оба!</a>
                   </li>
-
                   <li class="actions-slider-item">
                       <h3>Шоколадный пломбир и лимонный сорбет</h3>
                       <a href="blank.html" class="btn-red btn-double-ice">Давайте оба!</a>
@@ -198,20 +198,20 @@
 
                 <p class="about-gllacy">Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</p>
                 <ul class="features-list">
-                    <li class="features-item">
-                        Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
+                    <li class="features-item features-item-production">
+                      <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
                     </li>
 
-                    <li class="features-item">
-                        Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
+                    <li class="features-item features-item-organic">
+                      <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
                     </li>
 
-                    <li class="features-item">
-                        Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
+                    <li class="features-item features-item-ingredient">
+                      <p>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
                     </li>
 
-                    <li class="features-item">
-                        Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
+                    <li class="features-item features-item-delivery">
+                      <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
                     </li>
                 </ul>
 
@@ -226,19 +226,19 @@
               <article class="blog">
                 <h3>Новое в нашем блоге</h3>
                 <a href="blank.html">10 способов сервировки фруктовых щербетов к столу</a>
-                <!-- это изображение контентное или декоративное?? -->
-                <img src="img/back-strawberry.jpg" alt="Щербет с клубникой и мятой" width="560" height="220">
+                <!-- это изображение контентное или декоративное -->
+                <!-- <img src="img/back-strawberry.jpg" alt="Щербет с клубникой и мятой" width="560" height="220"> -->
               </article>
 
               <section class="subscribe">
                   <h3 class="visually-hidden">Подпишись на рассылку</h3>
                   <p>
-                      Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
+                    Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
                   </p>
 
                   <form action="https://echo.htmlacademy.ru" method="POST" class="form-subscribe">
-                      <label for="email-for-subscribe" class="visually-hidden">e-mail</label>
-                      <input type="email" name="email-for-subscribe" id="email-for-subscribe" placeholder="email@example.com">
+                      <label for="email-for-subscribe" class="visually-hidden">Введите e-mail</label>
+                      <input type="email" name="email-for-subscribe" id="email-for-subscribe" class="email-for-subscribe"  placeholder="email@example.com">
                       <button type="submit" class="btn-red btn-subscribe">Отправить</button>
                   </form>
               </section>
@@ -267,8 +267,9 @@
           </section>
 
           <!-- Всплывающее окно формы обратной связи, по умолчанию скрыто -->
-          <!-- <section class="modal-feedback">
+          <section class="modal-feedback">
             <h2 class="visually-hidden">Заполните форму обратной связи</h2>
+            <p>Мы обязательно вам ответим!</p>
             <button type="button" class="close-modal" aria-label="Закрыть форму обратной связи"></button>
 
             <form action="https://echo.htmlacademy.ru" method="POST" class="form-feedback">
@@ -286,7 +287,7 @@
               </div>
               <button type="submit" class="btn-red btn-feedback">Отправить</button>
             </form>
-          </section> -->
+          </section>
 
       </main>
 
