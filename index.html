@@ -67,9 +67,11 @@
                 <input id="form-enter-login" type="email" name="login" placeholder="email@example.com" class="form-enter-login">
                 <label for="form-enter-password" class="visually-hidden">Пароль</label>
                 <input id="form-enter-password" type="password" name="password" placeholder="......" class="form-enter-password">
-                <button type="submit" class="btn-red btn-enter">Войти</button>
-                <a href="blank.html" class="password-recovery">Забыли пароль?</a>
-                <a href="blank.html" class="registration">Новая регистрация</a>
+                <div class="wrapper-form-enter">
+                  <button type="submit" class="btn-red btn-enter">Войти</button>
+                  <a href="blank.html" class="password-recovery">Забыли пароль?</a>
+                  <a href="blank.html" class="registration">Новая регистрация</a>
+                </div>
               </form>
             </li>
             <li class="user-menu-item user-menu-basket basket-empty">
@@ -102,29 +104,30 @@
 
           <h2 class="visually-hidden">Двойное мороженое</h2>
           <!-- слайдер -->
-          <ul class="actions-slider-list">
-            <!-- открытый слайд имеет дополнительный класс actions-slider-item-open -->
-            <li class="actions-slider-item actions-slider-item-open">
-              <h3>Крем-брюле и пломбир с малиновым джемом</h3>
-              <a href="blank.html" class="btn-red btn-double-ice">Давайте оба!</a>
-            </li>
-            <!-- <li class="actions-slider-item">
-              <h3>Шоколадный пломбир и лимонный сорбет</h3>
-              <a href="blank.html" class="btn-red btn-double-ice">Давайте оба!</a>
-            </li> -->
-            <!-- <li class="actions-slider-item">
-              <h3>Пломбир с помадкой и клубничный щербет</h3>
-              <a href="blank.html" class="btn-red btn-double-ice">Давайте оба!</a>
-            </li> -->
-          </ul>
+          <div class="wrapper-box">
+            <ul class="actions-slider-list">
+              <!-- открытый слайд имеет дополнительный класс actions-slider-item-open -->
+              <li class="actions-slider-item actions-slider-item-open">
+                <h3>Крем-брюле и пломбир с&nbsp;малиновым джемом</h3>
+                <a href="blank.html" class="btn-red btn-double-ice">Давайте оба!</a>
+              </li>
+              <!-- <li class="actions-slider-item">
+                <h3>Шоколадный пломбир и&nbsp;лимонный сорбет</h3>
+                <a href="blank.html" class="btn-red btn-double-ice">Давайте оба!</a>
+              </li> -->
+              <!-- <li class="actions-slider-item">
+                <h3>Пломбир с помадкой и&nbsp;клубничный щербет</h3>
+                <a href="blank.html" class="btn-red btn-double-ice">Давайте оба!</a>
+              </li> -->
+            </ul>
 
-          <div class="slider-controls">
-            <!-- кнопка, соответсвующая текущему слайду имеет дополнительный класс btn-slide-open-->
-            <button type="button" class="btn-slide btn-slide-1 btn-slide-open" aria-label="Слайд 1"></button>
-            <button type="button" class="btn-slide btn-slide-2" aria-label="Слайд 2"></button>
-            <button type="button" class="btn-slide btn-slide-2" aria-label="Слайд 3"></button>
+            <div class="slider-controls">
+              <!-- кнопка, соответсвующая текущему слайду имеет дополнительный класс btn-slide-open-->
+              <button type="button" class="btn-slide btn-slide-1 btn-slide-open" aria-label="Слайд 1"></button>
+              <button type="button" class="btn-slide btn-slide-2" aria-label="Слайд 2"></button>
+              <button type="button" class="btn-slide btn-slide-2" aria-label="Слайд 3"></button>
+            </div>
           </div>
-
         </div>
       </section>
 
@@ -204,19 +207,19 @@
             <p class="about-gllacy">Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</p>
             <ul class="features-list">
               <li class="features-item features-item-production">
-                <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
-              </li>
-
-              <li class="features-item features-item-organic">
-                <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+                Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
               </li>
 
               <li class="features-item features-item-ingredient">
-                <p>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+                Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
+              </li>
+
+              <li class="features-item features-item-organic">
+                Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
               </li>
 
               <li class="features-item features-item-delivery">
-                <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+                Доставка нашего мороженого до заказчиков осуществляется в&nbsp;специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
               </li>
             </ul>
 
@@ -234,29 +237,30 @@
             </article>
 
             <section class="subscribe">
-              <h3 class="visually-hidden">Подпишись на рассылку</h3>
-              <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
-              </p>
+              <div class="wrapper-subscribe">
+                <h3 class="visually-hidden">Подпишись на рассылку</h3>
+                <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
+                </p>
 
-              <form action="https://echo.htmlacademy.ru" method="POST" class="form-subscribe">
-                <label for="email-for-subscribe" class="visually-hidden">Введите e-mail</label>
-                <input type="email" name="email-for-subscribe" id="email-for-subscribe" class="email-for-subscribe" placeholder="email@example.com">
-                <button type="submit" class="btn-red btn-subscribe">Отправить</button>
-              </form>
+                <form action="https://echo.htmlacademy.ru" method="POST" class="form-subscribe">
+                  <label for="email-for-subscribe" class="visually-hidden">Введите e-mail</label>
+                  <input type="email" name="email-for-subscribe" id="email-for-subscribe" class="email-for-subscribe" placeholder="email@example.com">
+                  <button type="submit" class="btn-red btn-subscribe">Отправить</button>
+                </form>
+              </div>
             </section>
           </div>
         </div>
       </section>
 
       <section class="contacts">
-        <div class="container">
+        <div class="container-contacts">
           <h2 class="visually-hidden">Контактная информация</h2>
-
           <img src="img/map.png" alt="Адрес главного офиса и офлайн-магазина: наб. Реки Карповки, 5 лит П, Санкт-Петербург" width="1200" height="430">
           <div class="contacts-info">
-            <p>Адрес главного офиса и офлайн-магазина:</p>
+            <p class="info-address">Адрес главного офиса и офлайн-магазина:</p>
             <address>наб. Реки Карповки, 5 лит П, Санкт-Петербург</address>
-            <p>
+            <p class="info-phone">
               Для заказов по телефону:<br>
               <a href="tel:+78005558628">+7 800 555-86-28</a><br>
               (с 10 до 20 ежедневно)
@@ -310,7 +314,7 @@
           </ul>
 
           <div class="footer-copy">
-            <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-html-academy.png" alt="Логотип HTML Academy" width="108" height="31"></a>
+            <a href="https://htmlacademy.ru/intensive/htmlcss" class="logo-htmlacademy"><img src="img/logo-html-academy.png" alt="Логотип HTML Academy" width="108" height="31"></a>
             <p class="footer-copy-description">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2021</p>
           </div>
         </div>
