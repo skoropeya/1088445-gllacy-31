@@ -26,6 +26,24 @@
   font-style: normal;
 }
 
+/* шрифты с символом рубля */
+@font-face {
+  font-family: "pt_sans_rub";
+  src: url("../fonts/ptsansrub-bold-webfont.woff2") format("woff2"),
+       url("../fonts/ptsansrub-bold-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "pt_sans_rub";
+  src: url("../fonts/ptsansrub-regular-webfont.woff2") format("woff2"),
+       url("../fonts/ptsansrub-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 /* цветовая схема */
 :root {
   --basic-white: #ffffff;
@@ -284,11 +302,13 @@ img {
   background-color: var(--menu-middle-orange);
 }
 
-.inner-nav-item-current {
+.inner-nav-item-current,
+.inner-nav-item-current:hover {
   background-color: var(--menu-orange);
 }
 
-.inner-nav-item-current a{
+.inner-nav-item-current a,
+.inner-nav-item-current:hover a {
   color: var(--basic-white);
 }
 
@@ -1027,6 +1047,10 @@ img {
 .good-item-price span {
   font-size: 45px;
   line-height: 45px;
+}
+
+.ruble-sign {
+  font-family: "pt_sans_rub";
 }
 
 /* добавляем метку ХИТ */
