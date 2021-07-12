@@ -41,7 +41,39 @@
        url("../fonts/ptsansrub-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+}
 
+/* анимация для появления модального окна */
+@keyframes appear {
+  0% {
+    opacity: 0.3;
+    transform: translateY(-50%) scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+}
+
+/* анимация для неправильно заполненной формы */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateY(-50%) translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateY(-50%) translateX(-3px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateY(-50%) translateX(3px);
+  }
 }
 
 /* цветовая схема */
@@ -844,6 +876,7 @@ img {
 
 .logo-htmlacademy img {
   display: block;
+  object-fit: contain;
 }
 
 .footer-copy-description {
@@ -1034,6 +1067,7 @@ img {
   width: 267px;
   height: 267px;
   order: -1;
+  object-fit: contain;
 }
 
 .wrapper-btn-view {
@@ -1379,14 +1413,22 @@ img {
   display: none;
   box-sizing: border-box;
   width: 477px;
-  position: relative;
-  /* position: fixed; */
-  /* top: 50%; */
-  /* transform: translateY(-50%); */
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: auto;
+  left: 0;
+  right: 0;
   margin: auto;
   padding: 20px 25px 27px 23px;
   background-color: var(--light-grey);
   border-radius: 6px;
+  z-index: 3;
+}
+
+.open-modal {
+  display: block;
+  animation: appear 1s;
 }
 
 .close-modal {
@@ -1440,6 +1482,10 @@ img {
   border-radius: 4px;
 }
 
+.feedback-field-error {
+  border-color: var(--gradient-orange2);
+}
+
 .feedback-name::placeholder,
 .feedback-email::placeholder,
 .feedback-message::placeholder {
@@ -1462,9 +1508,17 @@ img {
   padding: 10px 13px;
 }
 
+.feedback-field-error:focus {
+  border-color: var(--gradient-orange2);
+}
+
 .btn-feedback {
   padding: 10px 24px;
   border: none;
+}
+
+.error-form {
+  animation: shake 0.6s;
 }
 
 /* CATALOG */

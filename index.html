@@ -290,15 +290,15 @@
         <form action="https://echo.htmlacademy.ru" method="POST" class="form-feedback">
           <div class="form-feedback-wrapper name-wrapper">
             <label for="feedback-name" class="visually-hidden">Ваше имя и фамилия</label>
-            <input type="text" id="feedback-name" class="feedback-name" placeholder="Имя Фамилия">
+            <input type="text" id="feedback-name" class="feedback-field feedback-name" placeholder="Имя Фамилия">
           </div>
           <div class="form-feedback-wrapper email-wrapper">
             <label for="feedback-email" class="visually-hidden">Ваш e-mail</label>
-            <input type="email" id="feedback-email" class="feedback-email" placeholder="email@example.com">
+            <input type="email" id="feedback-email" class="feedback-field feedback-email" placeholder="email@example.com">
           </div>
           <div class="form-feedback-wrapper message-wrapper">
             <label for="feedback-message" class="visually-hidden">Текст сообщения</label>
-            <textarea name="feedback-message" id="feedback-message" class="feedback-message" cols="35" rows="5" placeholder="В свободной форме"></textarea>
+            <textarea name="feedback-message" id="feedback-message" class="feedback-field feedback-message" cols="35" rows="5" placeholder="В свободной форме"></textarea>
           </div>
           <div class="form-feedback-wrapper button-wrapper">
             <button type="submit" class="btn-red btn-feedback">Отправить</button>
@@ -334,6 +334,7 @@
     </footer>
 
   </div>
+  <script src="/js/popup-feedback.js"></script>
 </body>
 
 </html>
