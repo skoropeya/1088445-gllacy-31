@@ -905,6 +905,14 @@ img {
   letter-spacing: 0.05em;
 }
 
+.actions-slider-item {
+  display: none;
+}
+
+.actions-slider-item-open {
+  display: block;
+}
+
 .slider-controls {
   display: flex;
   position: absolute;
@@ -1562,7 +1570,6 @@ img {
   box-sizing: border-box;
   width: 196px;
   position: relative;
-  background-color: rgba(var(--basic-white-rgb), 0.2);
   border-radius: 20px;
 }
 
@@ -1577,7 +1584,7 @@ img {
   line-height: 18px;
   color: var(--basic-white);
   border: none;
-  background-color: transparent;
+  background-color: rgba(var(--basic-white-rgb), 0.2);
 }
 
 .svg-icon-triangle {
@@ -1586,9 +1593,13 @@ img {
   right: 14px;
 }
 
-.sorting-attributes:hover,
+.sorting-attributes:hover {
+  color: var(--dark-grey);
+}
+
 .sorting-attributes:focus {
   color: var(--dark-grey);
+  background-color: var(--basic-white);
 }
 
 .sorting-attributes:hover + .svg-icon-triangle path,
