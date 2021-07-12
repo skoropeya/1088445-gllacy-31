@@ -5,7 +5,7 @@ const formFeedback = modalFeedback.querySelector(".form-feedback");
 const nameFeedback = modalFeedback.querySelector(".feedback-name");
 const emailFeedback = modalFeedback.querySelector(".feedback-email");
 const messageFeedback = modalFeedback.querySelector(".feedback-message");
-
+const overlay = document.querySelector(".overlay");
 
 // найти все поля в форме
 const fieldsFormFeedback = modalFeedback.querySelectorAll(".feedback-field");
@@ -57,6 +57,7 @@ return
 openFeedback.addEventListener("click", function(evt) {
   evt.preventDefault();
   modalFeedback.classList.add("open-modal");
+  overlay.classList.add("overlay-open");
 
   cleanMarkField(fieldsFormFeedback);
   putFocus(fieldsFormFeedback);
@@ -95,6 +96,7 @@ closeFeedback.addEventListener("click", function(evt) {
   evt.preventDefault();
   modalFeedback.classList.remove("open-modal");
   modalFeedback.classList.remove("error-form");
+  overlay.classList.remove("overlay-open");
 });
 
 window.addEventListener("keydown", function(evt) {
@@ -103,6 +105,7 @@ window.addEventListener("keydown", function(evt) {
       evt.preventDefault();
       modalFeedback.classList.remove("open-modal");
       modalFeedback.classList.remove("error-form");
+      overlay.classList.remove("overlay-open");
     }
   }
 });
