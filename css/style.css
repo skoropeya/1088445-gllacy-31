@@ -195,7 +195,7 @@ img {
 }
 
 .header-logo {
-  margin-right: 24px;
+  margin-right: 13px;
 }
 
 .header-logo img {
@@ -339,7 +339,7 @@ img {
 }
 
 .header-nav-item:hover .inner-header-nav,
-.header-nav-item:focus .inner-header-nav {
+.header-nav-item:focus-within .inner-header-nav {
   display: block;
   z-index: 1;
 }
@@ -447,7 +447,7 @@ img {
 }
 
 .user-menu-search:hover .header-form-search,
-.user-menu-search:focus .header-form-search {
+.user-menu-search:focus-within .header-form-search {
   display: block;
   z-index: 1;
 }
@@ -562,7 +562,7 @@ img {
 }
 
 .user-menu-enter:hover .header-form-enter,
-.user-menu-enter:focus .header-form-enter {
+.user-menu-enter:focus-within .header-form-enter {
   display: block;
   z-index: 1;
 }
@@ -710,7 +710,7 @@ img {
 }
 
 .user-menu-basket:hover .header-user-order,
-.user-menu-basket:focus .header-user-order {
+.user-menu-basket:focus-within .header-user-order {
   display: block;
   z-index: 1;
 }
@@ -795,9 +795,10 @@ img {
 .footer-nav-list {
   justify-self: center;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
+  column-gap: 30px;
   margin: 0px;
-  margin-top: 18px;
+  margin-top: 11px;
   padding: 0px;
   list-style: none;
 }
@@ -896,7 +897,7 @@ img {
   display: block;
   box-sizing: border-box;
   width: 261px;
-  padding: 9px 20px;
+  padding: 7px 19px 10px 21px;
   margin: 0 auto;
   text-align: center;
   font-size: 32px;
@@ -944,7 +945,7 @@ img {
 
 /* promotions */
 .promotions {
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .promo-list {
@@ -997,7 +998,8 @@ img {
 
 /* goods */
 .goods {
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
+  margin-bottom: 20px;
 }
 
 .goods-list {
@@ -1050,11 +1052,12 @@ img {
 }
 
 .good-item:hover,
-.good-item:focus {
+.good-item:focus-within {
   z-index: 2;
 }
 
-.good-item:hover .wrapper-btn-view {
+.good-item:hover .wrapper-btn-view,
+.good-item:focus-within .wrapper-btn-view {
   display: flex;
   z-index: -1;
 }
@@ -1082,8 +1085,8 @@ img {
 
 .good-item-price {
   position: absolute;
-  top: 216px;
-  left: 13px;
+  top: 212px;
+  left: 0px;
   margin: 0px;
   font-weight: bold;
   font-size: 30px;
@@ -1096,6 +1099,10 @@ img {
   line-height: 45px;
 }
 
+.good-item-price .ruble-sign {
+  padding-left: 8px;
+}
+
 /* текст "руб." меняем на символ рубля */
 .ruble-sign {
   font-family: "pt_sans_rub";
@@ -1106,7 +1113,7 @@ img {
   content: "";
   position: absolute;
   top: 6px;
-  left: 13px;
+  left: 0px;
   width: 61px;
   height: 61px;
   border-radius: 50%;
@@ -1125,12 +1132,12 @@ img {
   color: var(--dark-grey);
   background-image: url("../img/pattern.png");
   border-radius: 16px;
-  padding: 24px 20px 36px 20px;
+  padding: 24px 20px 31px 20px;
 }
 
 .about-gllacy {
   margin: 0px;
-  margin-bottom: 21px;
+  margin-bottom: 17px;
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
@@ -1139,7 +1146,7 @@ img {
 .features-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  row-gap: 33px;
+  row-gap: 22px;
   column-gap: 26px;
   margin: 0px;
   padding: 0px;
@@ -1197,7 +1204,7 @@ img {
 .blog {
   box-sizing: border-box;
   height: 220px;
-  padding: 23px 20px;
+  padding: 17px 20px 23px 20px;
   color: var(--dark-grey);
   background-color: var(--basic-white);
   background-image: url("../img/back-strawberry.jpg");
@@ -1207,7 +1214,6 @@ img {
 }
 .blog h3 {
   margin: 0px;
-  margin-bottom: 15px;
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
@@ -1244,14 +1250,14 @@ img {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  padding: 29px 20px;
+  padding: 23px 20px;
   background-color: var(--light-grey);
   border-radius: 16px;
 }
 
 .subscribe p {
   margin: 0px;
-  margin-bottom: 46px;
+  margin-bottom: 40px;
   color: var(--text-grey);
   font-size: 16px;
 }
@@ -1321,10 +1327,9 @@ img {
   box-sizing: border-box;
   width: 303px;
   position: absolute;
-  top: 50%;
+  top: 62px;
   right: 27px;
-  transform: translateY(-50%);
-  padding: 32px 25px;
+  padding: 29px 25px;
   font-size: 14px;
   line-height: 20px;
   color: var(--dark-grey);
@@ -1334,16 +1339,15 @@ img {
 
 .info-address {
   margin: 0px;
-  margin-bottom: 8px;
 }
 
 .info-phone {
   margin: 0px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .contacts-info address {
-  margin-bottom: 30px;
+  margin-bottom: 22px;
   font-size: 18px;
   line-height: 24px;
   font-style: normal;
@@ -1364,9 +1368,8 @@ img {
 }
 
 /* modal-feedback */
-
 .modal-feedback {
-  /* display: none; */
+  display: none;
   box-sizing: border-box;
   width: 477px;
   position: relative;
@@ -1458,6 +1461,8 @@ img {
 }
 
 /* CATALOG */
+
+
 
 .wrapper-title-bread-crumbs {
   display: flex;
@@ -1832,7 +1837,7 @@ img {
 }
 
 .pagination-item-arrow .btn-next {
-  margin-left: 22px;
+  margin-left: 18px;
 }
 
 .btn-page-disabled {
@@ -1848,7 +1853,7 @@ img {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  padding: 4px;
+  padding: 3px;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
