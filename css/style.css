@@ -1,48 +1,3 @@
-/* подключение шрифтов */
-@font-face {
-  font-family: "Roboto";
-  src: local("Roboto"),
-       url("../fonts/roboto.woff2") format("woff2"),
-       url("../fonts/roboto.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: local("Roboto Bold"),
-       url("../fonts/robotobold.woff2") format("woff2"),
-       url("../fonts/robotobold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: local("Roboto Medium"),
-       url("../fonts/robotomedium.woff2") format("woff2"),
-       url("../fonts/robotomedium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-/* шрифты с символом рубля (текст "руб." заменяет на символ рубля) */
-@font-face {
-  font-family: "pt_sans_rub";
-  src: url("../fonts/ptsansrub-bold-webfont.woff2") format("woff2"),
-       url("../fonts/ptsansrub-bold-webfont.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "pt_sans_rub";
-  src: url("../fonts/ptsansrub-regular-webfont.woff2") format("woff2"),
-       url("../fonts/ptsansrub-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
 /* анимация для появления модального окна */
 @-webkit-keyframes appear {
   0% {
@@ -62,6 +17,28 @@
   100% {
     opacity: 1;
     transform: translateY(-50%) scale(1);
+  }
+}
+
+/* анимация для закрытия модального окна */
+@-webkit-keyframes disappear {
+  0% {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateY(-50%) scale(0);
+  }
+}
+@keyframes disappear {
+  0% {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateY(-50%) scale(0);
   }
 }
 
@@ -183,6 +160,7 @@ img {
 
 /* обертка для параметров фона и разбиения контента на 3 строки: header, main, footer */
 .wrapper-site {
+  min-height: 100%;
   display: grid;
   grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
@@ -294,30 +272,24 @@ img {
           text-decoration-color: rgba(var(--basic-white-rgb), 0.2);
 }
 
-.header-nav-item:hover,
-.header-nav-item:focus {
+.header-nav-item > a:hover,
+.header-nav-item > a:focus {
   background-color: var(--basic-white);
   border-radius: 26px;
-}
-
-.header-nav-item:hover > a,
-.header-nav-item:focus > a,
-.header-nav-item:active > a {
   text-decoration: none;
   color: var(--dark-grey);
 }
 
-.header-nav-item:active {
+.header-nav-item > a:active {
+  text-decoration: none;
+  color: var(--dark-grey);
   background-color: var(--more-more-grey);
   box-shadow: inset 0px 2px 1px var(--shadow-grey);
 }
 
-.header-nav-item-current {
+.header-nav-item-current > a {
   border-radius: 26px;
   background-color: var(--menu-orange);
-}
-
-.header-nav-item-current > a {
   text-decoration: none;
 }
 
@@ -328,7 +300,6 @@ img {
   left: -8px;
   margin: 0px;
   padding: 0px;
-
   list-style: none;
   background-color: var(--basic-white);
   border-radius: 4px;
@@ -383,23 +354,19 @@ img {
   border-bottom: 1px solid rgba(var(--dark-grey-rgb), 0.2);
 }
 
-.inner-nav-item:hover,
-.inner-nav-item:focus {
+.inner-nav-item a:hover,
+.inner-nav-item a:focus {
   background-color: var(--menu-light-orange);
 }
 
-.inner-nav-item:active {
+.inner-nav-item a:active {
   background-color: var(--menu-middle-orange);
 }
 
-.inner-nav-item-current,
-.inner-nav-item-current:hover {
-  background-color: var(--menu-orange);
-}
-
 .inner-nav-item-current a,
-.inner-nav-item-current:hover a {
+.inner-nav-item-current a:hover {
   color: var(--basic-white);
+  background-color: var(--menu-orange);
 }
 
 .header-nav-item:hover .inner-header-nav,
@@ -1207,12 +1174,7 @@ img {
 }
 
 .good-item-price .ruble-sign {
-  padding-left: 8px;
-}
-
-/* текст "руб." меняем на символ рубля */
-.ruble-sign {
-  font-family: "pt_sans_rub";
+  padding-left: 5px;
 }
 
 /* добавляем метку ХИТ */
@@ -1512,6 +1474,11 @@ img {
 }
 
 .close-modal {
+  -webkit-animation: disappear 1s;
+          animation: disappear 1s;
+}
+
+.btn-close-modal {
   position: absolute;
   top: 15px;
   right: 16px;

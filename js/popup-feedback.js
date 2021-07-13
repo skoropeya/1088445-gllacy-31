@@ -1,6 +1,6 @@
 const modalFeedback = document.querySelector(".modal-feedback");
 const openFeedback = document.querySelector(".open-modal-feedback");
-const closeFeedback = modalFeedback.querySelector(".close-modal");
+const closeFeedback = modalFeedback.querySelector(".btn-close-modal");
 const formFeedback = modalFeedback.querySelector(".form-feedback");
 const nameFeedback = modalFeedback.querySelector(".feedback-name");
 const emailFeedback = modalFeedback.querySelector(".feedback-email");
@@ -54,6 +54,15 @@ return
   return
  };
 
+//  действия при закрытии окна
+function closeModal() {
+  modalFeedback.classList.remove("open-modal");
+  modalFeedback.classList.remove("error-form");
+  modalFeedback.classList.remove("close-modal");
+  overlay.classList.remove("overlay-open");
+};
+
+
 openFeedback.addEventListener("click", function(evt) {
   evt.preventDefault();
   modalFeedback.classList.add("open-modal");
@@ -94,18 +103,16 @@ formFeedback.addEventListener("submit", function(evt) {
 
 closeFeedback.addEventListener("click", function(evt) {
   evt.preventDefault();
-  modalFeedback.classList.remove("open-modal");
-  modalFeedback.classList.remove("error-form");
-  overlay.classList.remove("overlay-open");
+  modalFeedback.classList.add("close-modal");
+  setTimeout(closeModal, 900);
 });
 
 window.addEventListener("keydown", function(evt) {
   if (evt.keyCode === 27) {
     if (modalFeedback.classList.contains("open-modal")) {
       evt.preventDefault();
-      modalFeedback.classList.remove("open-modal");
-      modalFeedback.classList.remove("error-form");
-      overlay.classList.remove("overlay-open");
+      modalFeedback.classList.add("close-modal");
+      setTimeout(closeModal, 900);
     }
   }
 });
