@@ -149,6 +149,35 @@ body {
   min-height: 100%;
 }
 
+/* обертка для параметров фона и разбиения контента на 3 строки: header, main, footer */
+.wrapper-site {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+/* цвет и картинка для фона меняются в слайдере*/
+.wrapper-site-1 {
+  background-color: var(--background-green);
+  background-image: url("../img/creme-brulee-raspberry_blur.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+.wrapper-site-2 {
+  background-color: var(--background-blue);
+  background-image: url("../img/chocolate-lemon-sorbet_blur.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+.wrapper-site-3 {
+  background-color: var(--background-brown);
+  background-image: url("../img/fondant-strawberry-sherbet_blur.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
 a {
   text-decoration: none;
 }
@@ -156,31 +185,6 @@ a {
 img {
   max-width: 100%;
   height: auto;
-}
-
-/* обертка для параметров фона и разбиения контента на 3 строки: header, main, footer */
-.wrapper-site {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start;
-  background-repeat: no-repeat;
-  background-position: top center;
-}
-
-/* цвет и картинка для фона меняются в слайдере*/
-.wrapper-site-1 {
-  background-color: var(--background-green);
-  background-image: url("../img/creme-brulee-raspberry_blur.png");
-}
-.wrapper-site-2 {
-  background-color: var(--background-blue);
-  background-image: url("../img/chocolate-lemon-sorbet_blur.png");
-}
-.wrapper-site-3 {
-  background-color: var(--background-brown);
-  background-image: url("../img/fondant-strawberry-sherbet_blur.png");
 }
 
 /* центрируем контент и ограничиваем его ширину */
