@@ -908,6 +908,7 @@ img {
 
 .footer-copy-description {
   margin: 0px;
+  margin-top: -4px;
   font-size: 12px;
   line-height: 18px;
   color: var(--basic-white);
@@ -1383,26 +1384,12 @@ img {
 }
 
 /* contacts */
-/* центровщик для блока с картой */
-.container-contacts {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0px;
+.wrapper-contacts {
   position: relative;
 }
 
-.contacts img {
+.contacts iframe {
   display: block;
-}
-
-.container-contacts::before {
-  content: "";
-  position: absolute;
-  top: 94px;
-  left: 316px;
-  width: 80px;
-  height: 140px;
-  background-image: url("../img/map-marker.png");
 }
 
 .contacts-info {
@@ -1410,7 +1397,7 @@ img {
   width: 303px;
   position: absolute;
   top: 62px;
-  right: 27px;
+  right: 0px;
   padding: 29px 25px;
   font-size: 14px;
   line-height: 20px;
@@ -1425,7 +1412,7 @@ img {
 
 .info-phone {
   margin: 0px;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
 }
 
 .contacts-info address {
