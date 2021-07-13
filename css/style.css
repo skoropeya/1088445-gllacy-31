@@ -146,12 +146,12 @@ body {
   line-height: 22px;
   background-color: var(--background-green);
   color: var(--basic-white);
-  min-height: 100%;
+  height: 100%;
 }
 
 /* обертка для параметров фона и разбиения контента на 3 строки: header, main, footer */
 .wrapper-site {
-  min-height: 100vh;
+  min-height: 100%;
   display: grid;
   grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
