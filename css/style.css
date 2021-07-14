@@ -233,7 +233,6 @@ img {
 }
 
 /* header */
-
 .main-header .wrapper-box {
   display: flex;
   padding-top: 9px;
@@ -241,6 +240,7 @@ img {
 
 .header-logo {
   margin-right: 13px;
+  flex-shrink: 0;
 }
 
 .header-logo img {
@@ -249,6 +249,7 @@ img {
 
 .header-nav-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   margin: 0px;
   margin-top: 14px;
@@ -380,6 +381,7 @@ img {
 }
 
 .user-menu {
+  flex-shrink: 0;
   display: flex;
   margin: 0px;
   margin-top: 14px;
@@ -1036,10 +1038,11 @@ img {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  height: 229px;
+  min-height: 229px;
   padding: 16px 22px 22px 16px;
   border-radius: 16px;
   background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -1394,6 +1397,7 @@ img {
 
 .contacts iframe {
   display: block;
+  width: 100%;
 }
 
 .contacts-info {
@@ -1426,7 +1430,8 @@ img {
   font-style: normal;
   font-weight: bold;
 }
-.contacts-info a {
+
+.info-phone a {
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
@@ -1435,9 +1440,10 @@ img {
 
 .btn-open-feedback {
   display: block;
+  box-sizing: border-box;
   width: 100%;
   padding: 10px;
-  border: none;
+  text-align: center;
 }
 
 /* modal-feedback */
@@ -1714,18 +1720,15 @@ img {
 }
 
 /* filter-price */
-.filter-price legend {
-  margin-bottom: 0px;
-}
-
-.wrapper-filter-price {
-  display: flex;
-  margin-bottom: 7px;
+.filter-price {
+  position: relative;
 }
 
 .filter-price-show {
+  position: absolute;
+  top: -23px;
+  left: 57px;
   margin: 0px;
-  margin-left: 4px;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;

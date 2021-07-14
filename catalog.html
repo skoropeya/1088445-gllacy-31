@@ -151,7 +151,8 @@
             <fieldset class="sorting">
               <legend>Сортировка:</legend>
               <div class="wrapper-select">
-                <select class="sorting-attributes">
+                <label for="sorting-attributes" class="visually-hidden">Параметры сортировки</label>
+                <select class="sorting-attributes" id="sorting-attributes">
                   <option class="attribute-item" value="popularity" selected>по популярности</option>
                   <option class="attribute-item" value="first-low-cost">сначала недорогие</option>
                   <option class="attribute-item" value="first-high-cost">сначала дорогие</option>
@@ -164,12 +165,10 @@
             </fieldset>
 
             <fieldset class="filter-price">
-              <div class="wrapper-filter-price">
-                <legend>Цена:</legend>
-                <p class="filter-price-show">
-                  <span class="label-min-price">100</span> <span class="ruble-sign">&#8381;</span> – <span class="label-max-price">500</span> <span class="ruble-sign">&#8381;</span>
-                </p>
-              </div>
+              <legend>Цена:</legend>
+              <p class="filter-price-show">
+                <span class="label-min-price">100</span> <span class="ruble-sign">&#8381;</span> – <span class="label-max-price">500</span> <span class="ruble-sign">&#8381;</span>
+              </p>
               <div class="filter-price-range">
                 <div class="price-scale">
                   <div class="price-scale-bar">
@@ -398,10 +397,10 @@
       <div class="container">
         <div class="wrapper-box">
           <ul class="footer-socials-list">
-            <li class="socials-item socials-fb"><a href="blank.html"><span class="visually-hidden">Facebook</span></a></li>
-            <li class="socials-item socials-vk"><a href="blank.html"><span class="visually-hidden">Вконтакте</span></a></li>
-            <li class="socials-item socials-inst"><a href="blank.html"><span class="visually-hidden">Instagram</span></a></li>
-            <li class="socials-item socials-tw"><a href="blank.html"><span class="visually-hidden">Twitter</span></a></li>
+            <li class="socials-item socials-fb"><a href="blank.html" aria-label="Facebook"></a></li>
+            <li class="socials-item socials-vk"><a href="blank.html" aria-label="Вконтакте"></a></li>
+            <li class="socials-item socials-inst"><a href="blank.html" aria-label="Instagram"></a></li>
+            <li class="socials-item socials-tw"><a href="blank.html" aria-label="Twitter"></a></li>
           </ul>
 
           <ul class="footer-nav-list">
